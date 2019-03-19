@@ -2,8 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // подключаем вспомогательыне модули и css
-import Api from './api';
-import Table from './table';
+import Api from './js/api';
+import Table from './js/table';
 import './main.css';
 
 window.onload = function() {
