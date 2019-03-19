@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+table {
+  table-layout: fixed;
+}
+
 .root {
   margin-top: 10px;
 }
@@ -17,6 +21,5 @@
 }
 
 .table-bordered {
-  table-layout: auto;
   width: 200px;
 }
