@@ -1,19 +1,19 @@
 ## task1 - Валидатор скобок
 
-- cd task1 && node task
+- cd task1 && node index
 
 Дано алгебраическое выражение, использующее скобки только трех типов: (), [] {}. Необходимо написать функцию, которая получает на вход алгебраическое выражение в виде строки и валидирует расстановку скобок в выражении. Функция возвращает true, если все скобки расставлены верно и false, если в расстановке скобок есть ошибка. Открывающаяся скобка должна быть закрыта скобкой своего типа. Попробовать оценить получившийся алгоритм по скорости и по памяти. Демонстрация нескольких решений будет огромным плюсом.
 
 Пример работы функции:
-const correct1 = ‘{((a+b)_3) + a + c_[2-x]}*x’;
-const correct2 = ‘()[{a}+c]’;
-const incorrect1 = ‘(a+{b) *c}’;
-const incorrect2 = ‘([a+b]\*c}’;
+const correct1 = ‘{((a+b)_3) + a + c_[2-x]}*x’;<br>
+const correct2 = ‘()[{a}+c]’;<br>
+const incorrect1 = ‘(a+{b) *c}’;<br>
+const incorrect2 = ‘([a+b]\*c}’;<br><br>
 
-solution(correct1) === true;
-solution(correct2) === true;
-solution(incorrect1) === false;
-solution(incorrect2) === false;
+solution(correct1) === true;<br>
+solution(correct2) === true;<br>
+solution(incorrect1) === false;<br>
+solution(incorrect2) === false;<br>
 
 ## task2 - Игра “Пятнашки”
 
