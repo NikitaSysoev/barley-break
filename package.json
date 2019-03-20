@@ -1,0 +1,17 @@
+{
+  "name": "barley-break",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "task1": "cd task1 && node index",
+    "task2": "cd task2 && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikitaSysoev/barley-break.git"
+  },
+  "author": "Nikita Sysoev",
+  "license": "ISC",
+  "homepage": "https://github.com/NikitaSysoev/barley-break#readme"
+}
