@@ -7,7 +7,7 @@ import Table from './js/table';
 import './main.css';
 
 window.onload = function() {
-  // как только сработает событие onload запускаем игру
+  // как только вся страница загрузится и сработает событие onload запускаем игру
   start();
 
   //  метод перезапуска игры
@@ -87,8 +87,8 @@ window.onload = function() {
             const item = cells[j].textContent ? parseInt(cells[j].textContent) : '';
             tableStatus.push(item);
           }
-          // При каждом клике проверяем соответвует ли состояние игры победе
-          // ставим setTimeout чтобы все визуальные изменения успели выполниться
+          // При каждом клике, если игра не завершена, проверяем соответвует ли состояние игры победе
+          // ставим setTimeout чтобы в случае победы все визуальные изменения успели выполниться
           if (play) setTimeout(() => checkGame(tableStatus), 0);
         }
       });

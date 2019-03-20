@@ -20,7 +20,7 @@ export default class Table {
       ${this.state[i] === 0 ? '' : this.state[i]}</td>`;
     }
     div += '</tr></tbody></table>';
-    div += '</div><button class="btn btn-danger" id="restart">Restart</button>';
+    div += '<button class="btn btn-danger" id="restart">Restart</button></div>';
     return div;
   }
 }
