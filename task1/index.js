@@ -5,25 +5,23 @@ const incorrect2 = '([a+b]*c}';
 
 function solution1(text) {
   const arr = [];
+  const config = {
+    '{':'}',
+    '(':')',
+    '[':']'
+  }
   for (const x of text) {
-    // заполняем массив если есть открывающие
-    if (x === '(') arr.push(1);
-    if (x === '[') arr.push(2);
-    if (x === '{') arr.push(3);
-    // завершаем работу программы если нарушен порядок или нет открывающих
-    if (x === '}' && arr[arr.length - 1] !== 3) return false;
-    if (x === ']' && arr[arr.length - 1] !== 2) return false;
-    if (x === ')' && arr[arr.length - 1] !== 1) return false;
-    // если предыдущие условия не выполнились и есть закрывающие очищаем массив
-    if (x === ')' || x === ']' || x === '}') {
-      arr.pop();
+    if(Object.keys(config).includes(x)){
+      arr.unshift(x);
+    }
+    if(Object.values(config).includes(x) && config[arr[0]] === x){
+      arr.shift();
     }
   }
-  // если программа не завершена и массив пустой значит порядок соблюден и незакрытых нет
-  return arr.length === 0;
+  return !arr.length;
 }
 
-solution1(correct1);
-solution1(correct2);
-solution1(incorrect1);
-solution1(incorrect2);
+console.log(solution1(correct1));
+console.log(solution1(correct2));
+console.log(solution1(incorrect1));
+console.log(solution1(incorrect2));
