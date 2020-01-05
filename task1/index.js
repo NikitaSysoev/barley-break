@@ -11,11 +11,12 @@ function solution1(text) {
     '[':']'
   }
   for (const x of text) {
-    if(Object.keys(config).includes(x)){
-      arr.unshift(x);
+    if(config[x]){
+      arr.push(x);
     }
-    if(Object.values(config).includes(x) && config[arr[0]] === x){
-      arr.shift();
+    const lastElem = arr[arr.length-1];
+    if(x === config[lastElem]){
+      arr.pop();
     }
   }
   return !arr.length;
